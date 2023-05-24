@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Base.Theme.DateHunter" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.DateHunter" parent="Base.Theme.DateHunter" />
+
+</resources>
