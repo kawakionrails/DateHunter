@@ -10,7 +10,7 @@ class SplashViewModel : BaseViewModel() {
 
     fun goToHome(navController: NavController) {
         Handler(Looper.getMainLooper()).postDelayed({
-            navController.navigate(R.id.action_splashFragment_to_homeFragment)
+            navController.navigate(R.id.action_splashFragment_to_signInFragment)
         }, 3000)
     }
 

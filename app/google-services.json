@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392632012292",
+    "project_id": "br-com-datehunter",
+    "storage_bucket": "br-com-datehunter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392632012292:android:9e41933caa8a2337646f51",
+        "android_client_info": {
+          "package_name": "br.com.datehunter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByQa9e37H-_XUxizFIrWr0VSnjc6lpIbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
