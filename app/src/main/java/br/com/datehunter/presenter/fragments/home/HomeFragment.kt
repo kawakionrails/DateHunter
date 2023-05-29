@@ -12,7 +12,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): FragmentHomeBinding? {
+    ): FragmentHomeBinding {
         return FragmentHomeBinding.inflate(layoutInflater, container, false)
     }
 
