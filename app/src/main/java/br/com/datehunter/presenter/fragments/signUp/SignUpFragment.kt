@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.datehunter.MainActivity
+import br.com.datehunter.R
 import br.com.datehunter.databinding.FragmentSignUpBinding
 import br.com.datehunter.presenter.base.BaseFragment
 
@@ -29,6 +30,9 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
                 binding.password.text.toString(),
                 findNavController()
             )
+        }
+        binding.signIn.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 

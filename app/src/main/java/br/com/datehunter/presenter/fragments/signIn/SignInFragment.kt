@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.datehunter.MainActivity
+import br.com.datehunter.R
 import br.com.datehunter.databinding.FragmentSignInBinding
 import br.com.datehunter.presenter.base.BaseFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -34,6 +35,9 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>() {
                 binding.password.text.toString(),
                 findNavController()
             )
+        }
+        binding.signUp.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
     }
 
