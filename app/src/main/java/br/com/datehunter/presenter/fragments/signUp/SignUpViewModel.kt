@@ -1,4 +1,4 @@
-package br.com.datehunter.presenter.fragments.signIn
+package br.com.datehunter.presenter.fragments.signUp
 
 import android.util.Log
 import android.widget.Toast
@@ -10,21 +10,21 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class SignInViewModel : BaseViewModel() {
+class SignUpViewModel : BaseViewModel() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
-    fun signIn(
+    fun signUp(
         mainActivity: MainActivity,
         username: String,
         password: String,
         navController: NavController
     ) {
         firebaseAuth = Firebase.auth
-        firebaseAuth.signInWithEmailAndPassword(username, password)
+        firebaseAuth.createUserWithEmailAndPassword(username, password)
             .addOnCompleteListener(mainActivity) { task ->
                 if (task.isSuccessful) {
-                    navController.navigate(R.id.action_signInFragment_to_homeFragment)
+                    navController.navigate(R.id.action_signUpFragment_to_homeFragment)
                 } else {
                     Log.e("TAG", "signUp: ${task.exception}.")
                 }
