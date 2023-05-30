@@ -1,13 +1,16 @@
 package br.com.datehunter
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import br.com.datehunter.databinding.ActivityMainBinding
+import br.com.datehunter.presenter.base.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun getViewBinding(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    override fun setUpActivity() {
+        // TODO: Not yet implemented
     }
 
 }
