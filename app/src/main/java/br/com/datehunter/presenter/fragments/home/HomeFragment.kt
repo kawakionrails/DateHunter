@@ -3,6 +3,7 @@ package br.com.datehunter.presenter.fragments.home
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import br.com.datehunter.R
 import br.com.datehunter.databinding.FragmentHomeBinding
 import br.com.datehunter.presenter.base.BaseFragment
 
@@ -17,7 +18,25 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun setUpFragment() {
-        // TODO: Not yet implemented
+        setUpObservables()
+    }
+
+    private fun setUpObservables() {
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
+                    true
+                }
+
+                R.id.settings -> {
+                    true
+                }
+
+                else -> {
+                    false
+                }
+            }
+        }
     }
 
 }
