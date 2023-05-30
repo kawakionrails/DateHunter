@@ -28,6 +28,7 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
                 (activity as MainActivity),
                 binding.username.text.toString(),
                 binding.password.text.toString(),
+                binding.confirmPassword.text.toString(),
                 findNavController()
             )
         }
