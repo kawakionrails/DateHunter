@@ -20,6 +20,9 @@ class SignInViewModel : BaseViewModel() {
         password: String,
         navController: NavController
     ) {
+        if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
+            return
+        }
         firebaseAuth = Firebase.auth
         firebaseAuth.signInWithEmailAndPassword(username, password)
             .addOnCompleteListener(mainActivity) { task ->

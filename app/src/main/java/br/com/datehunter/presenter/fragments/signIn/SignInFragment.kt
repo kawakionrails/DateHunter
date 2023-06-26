@@ -29,6 +29,7 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>() {
 
     override fun setUpFragment() {
         binding.signIn.setOnClickListener {
+            it.isEnabled = false
             signInViewModel.signIn(
                 (activity as MainActivity),
                 binding.username.text.toString(),

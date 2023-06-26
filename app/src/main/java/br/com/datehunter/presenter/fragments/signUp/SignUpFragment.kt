@@ -24,6 +24,7 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
 
     override fun setUpFragment() {
         binding.signUp.setOnClickListener {
+            it.isEnabled = false
             signUpViewModel.signUp(
                 (activity as MainActivity),
                 binding.username.text.toString(),
