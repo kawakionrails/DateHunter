@@ -2,7 +2,7 @@ package br.com.datehunter.presenter.fragments.signIn
 
 import android.util.Log
 import androidx.navigation.NavController
-import br.com.datehunter.presenter.MainActivity
+import br.com.datehunter.presenter.activities.main.MainActivity
 import br.com.datehunter.R
 import br.com.datehunter.presenter.base.BaseViewModel
 import com.google.firebase.auth.FirebaseAuth

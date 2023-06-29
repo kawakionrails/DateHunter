@@ -1,4 +1,4 @@
-package br.com.datehunter.presenter
+package br.com.datehunter.presenter.activities.main
 
 import android.view.View
 import androidx.activity.viewModels

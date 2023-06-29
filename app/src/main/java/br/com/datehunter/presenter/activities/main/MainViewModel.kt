@@ -1,4 +1,4 @@
-package br.com.datehunter.presenter
+package br.com.datehunter.presenter.activities.main
 
 import br.com.datehunter.R
 import br.com.datehunter.presenter.base.BaseViewModel

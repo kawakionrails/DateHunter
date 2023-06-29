@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.datehunter.presenter.MainActivity
+import br.com.datehunter.presenter.activities.main.MainActivity
 import br.com.datehunter.R
 import br.com.datehunter.databinding.FragmentSignInBinding
 import br.com.datehunter.presenter.base.BaseFragment
