@@ -1,7 +1,9 @@
 package br.com.datehunter.presenter.fragments.profile
 
-import androidx.lifecycle.ViewModel
+import br.com.datehunter.presenter.base.BaseViewModel
 
-class ProfileViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class ProfileViewModel : BaseViewModel() {
+
+    // TODO: Not yet implemented
+
 }

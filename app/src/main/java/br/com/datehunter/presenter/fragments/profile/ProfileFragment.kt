@@ -20,8 +20,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
     }
 
     private fun setUpObservables() {
-
+        // TODO: Not yet implemented
     }
-
 
 }

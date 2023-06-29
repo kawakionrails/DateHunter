@@ -20,8 +20,7 @@ class ChatFragment : BaseFragment<FragmentChatBinding>() {
     }
 
     private fun setUpObservables() {
-
+        // TODO: Not yet implemented
     }
-
 
 }

@@ -1,11 +1,11 @@
-package br.com.datehunter
+package br.com.datehunter.presenter
 
 import android.view.View
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import br.com.datehunter.R
 import br.com.datehunter.databinding.ActivityMainBinding
-import br.com.datehunter.presenter.MainViewModel
 import br.com.datehunter.presenter.base.BaseActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {

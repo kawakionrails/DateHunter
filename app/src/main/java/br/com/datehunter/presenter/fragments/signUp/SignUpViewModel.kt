@@ -3,7 +3,7 @@ package br.com.datehunter.presenter.fragments.signUp
 import android.util.Log
 import android.widget.Toast
 import androidx.navigation.NavController
-import br.com.datehunter.MainActivity
+import br.com.datehunter.presenter.MainActivity
 import br.com.datehunter.R
 import br.com.datehunter.common.constants.PASSWORD_REGEX
 import br.com.datehunter.presenter.base.BaseViewModel
