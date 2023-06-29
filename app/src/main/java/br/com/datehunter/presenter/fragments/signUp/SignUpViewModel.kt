@@ -22,15 +22,16 @@ class SignUpViewModel : BaseViewModel() {
         confirmPassword: String,
         navController: NavController
     ) {
-        if (username.isNullOrEmpty() || password.isNullOrEmpty())
+        if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
             return
+        }
         if (PASSWORD_REGEX.matches(password)) {
             if (password == confirmPassword) {
                 firebaseAuth = Firebase.auth
                 firebaseAuth.createUserWithEmailAndPassword(username, password)
                     .addOnCompleteListener(mainActivity) { task ->
                         if (task.isSuccessful) {
-                            navController.navigate(R.id.action_signUpFragment_to_homeFragment)
+                            navController.navigate(R.id.action_signUpFragment_to_nav_home)
                         } else {
                             Log.e("TAG", "signUp: ${task.exception}.")
                         }

@@ -23,25 +23,11 @@
         tools:layout="@layout/fragment_sign_in">
 
         <action
-            android:id="@+id/action_signInFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-
-        <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="br.com.datehunter.presenter.fragments.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_signInFragment_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
     <fragment
@@ -51,19 +37,9 @@
         tools:layout="@layout/fragment_sign_up">
 
         <action
-            android:id="@+id/action_signUpFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_signUpFragment_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
-    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment" />
-    <fragment
-        android:id="@+id/chatFragment"
-        android:name="br.com.datehunter.presenter.fragments.chat.ChatFragment"
-        android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
-    <action android:id="@+id/action_global_chatFragment" app:destination="@id/chatFragment" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="br.com.datehunter.presenter.fragments.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" /><action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
+
+    <include app:graph="@navigation/nav_home" />
 </navigation>

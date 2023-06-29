@@ -26,7 +26,7 @@ class SignInViewModel : BaseViewModel() {
         firebaseAuth.signInWithEmailAndPassword(username, password)
             .addOnCompleteListener(mainActivity) { task ->
                 if (task.isSuccessful) {
-                    navController.navigate(R.id.action_signInFragment_to_homeFragment)
+                    navController.navigate(R.id.action_signInFragment_to_nav_home)
                 } else {
                     Log.e("TAG", "signUp: ${task.exception}.")
                 }
