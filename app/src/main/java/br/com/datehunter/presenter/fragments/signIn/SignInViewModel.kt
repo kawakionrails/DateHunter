@@ -1,9 +1,8 @@
 package br.com.datehunter.presenter.fragments.signIn
 
 import android.util.Log
-import android.widget.Toast
 import androidx.navigation.NavController
-import br.com.datehunter.MainActivity
+import br.com.datehunter.presenter.activities.main.MainActivity
 import br.com.datehunter.R
 import br.com.datehunter.presenter.base.BaseViewModel
 import com.google.firebase.auth.FirebaseAuth
@@ -20,11 +19,14 @@ class SignInViewModel : BaseViewModel() {
         password: String,
         navController: NavController
     ) {
+        if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
+            return
+        }
         firebaseAuth = Firebase.auth
         firebaseAuth.signInWithEmailAndPassword(username, password)
             .addOnCompleteListener(mainActivity) { task ->
                 if (task.isSuccessful) {
-                    navController.navigate(R.id.action_signInFragment_to_homeFragment)
+                    navController.navigate(R.id.action_signInFragment_to_nav_home)
                 } else {
                     Log.e("TAG", "signUp: ${task.exception}.")
                 }

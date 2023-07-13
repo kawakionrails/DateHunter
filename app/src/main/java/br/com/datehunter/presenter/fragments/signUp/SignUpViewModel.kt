@@ -3,7 +3,7 @@ package br.com.datehunter.presenter.fragments.signUp
 import android.util.Log
 import android.widget.Toast
 import androidx.navigation.NavController
-import br.com.datehunter.MainActivity
+import br.com.datehunter.presenter.activities.main.MainActivity
 import br.com.datehunter.R
 import br.com.datehunter.common.constants.PASSWORD_REGEX
 import br.com.datehunter.presenter.base.BaseViewModel
@@ -22,13 +22,16 @@ class SignUpViewModel : BaseViewModel() {
         confirmPassword: String,
         navController: NavController
     ) {
+        if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
+            return
+        }
         if (PASSWORD_REGEX.matches(password)) {
             if (password == confirmPassword) {
                 firebaseAuth = Firebase.auth
                 firebaseAuth.createUserWithEmailAndPassword(username, password)
                     .addOnCompleteListener(mainActivity) { task ->
                         if (task.isSuccessful) {
-                            navController.navigate(R.id.action_signUpFragment_to_homeFragment)
+                            navController.navigate(R.id.action_signUpFragment_to_nav_home)
                         } else {
                             Log.e("TAG", "signUp: ${task.exception}.")
                         }

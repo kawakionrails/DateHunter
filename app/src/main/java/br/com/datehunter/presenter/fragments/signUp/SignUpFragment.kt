@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.datehunter.MainActivity
-import br.com.datehunter.R
+import br.com.datehunter.presenter.activities.main.MainActivity
 import br.com.datehunter.databinding.FragmentSignUpBinding
 import br.com.datehunter.presenter.base.BaseFragment
 
@@ -24,6 +23,7 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
 
     override fun setUpFragment() {
         binding.signUp.setOnClickListener {
+            it.isEnabled = false
             signUpViewModel.signUp(
                 (activity as MainActivity),
                 binding.username.text.toString(),
