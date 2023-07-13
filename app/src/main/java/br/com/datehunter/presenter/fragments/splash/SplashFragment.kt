@@ -26,7 +26,11 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
     private fun setUpObservables() {
         with(splashViewModel) {
-            goToHome(findNavController())
+            if (splashViewModel.getCurrentUser() != null) {
+                goToHome(findNavController())
+            } else {
+                goToSignIn(findNavController())
+            }
         }
     }
 
